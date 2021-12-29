@@ -80,6 +80,7 @@ a{
   display: flex;
   align-items: center;
   justify-content: center;
+  top : 35vh;
   margin : 5px 0;
   height: 3em;
   font-size : 2.5rem;
@@ -119,6 +120,15 @@ a{
   height : 100px;
   background : rgb(29,29,31);
 }
+
+#scroll-section-2 .b{
+  top : 10%;
+  left : 40%;
+}
+#scroll-section-2 .c{
+  top : 15%;
+  left : 45%;
+}
 .mid-message{
   padding : 0 1rem;
   font-size : 2rem;
@@ -149,7 +159,6 @@ footer{
 
 .sticky-elem{
   position : fixed;
-  top : 0;
   left : 0;
   width : 100%;
   display: none;
@@ -176,6 +185,13 @@ footer{
   }
   #scroll-section-2 .main-message{
     font-size : 6vw;
+  }
+  #scroll-section-2 .b{
+    top : 20%;
+    left : 53%;
+  }
+  #scroll-section-2 .c{
+    left : 55%;
   }
   .main-message small{
     font-size : 1.5vw;
