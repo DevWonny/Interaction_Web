@@ -69,6 +69,7 @@ a{
 }
 
 .scroll-section{
+  position : relative;
   padding-top : 50vh;
 }
 
@@ -182,6 +183,15 @@ footer{
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem{
   display: block;
+}
+
+.image-blend-canvas{
+
+}
+#scroll-section-3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media(min-width : 1024px){
