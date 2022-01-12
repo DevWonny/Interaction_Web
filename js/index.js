@@ -642,9 +642,11 @@
   });
 
   window.addEventListener("load", () => {
+    document.body.classList.remove('before-load');
     setLayout();
     sceneInfo[0].objs.context.drawImage(sceneInfo[0].objs.videoImages[0], 0, 0);
   }); // dom 구조 및 이미지까지 모두 로드 되었을때 실행
+
   // window.addEventListener('DOMContentLoaded', setLayout); // dom구조만 로드되면 실행됨.
   window.addEventListener("resize", () => {
     if (window.innerWidth > 900) {
@@ -655,6 +657,9 @@
 
   // mobile 방향을 바꿀때 마다 실행되는 이벤트
   window.addEventListener('orientationchange', setLayout);
+  document.querySelector('.loading').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+  })
 
   setCanvasImages();
 
