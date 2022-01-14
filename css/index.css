@@ -22,6 +22,11 @@ a{
   color : rgb(29,29,31);
   text-decoration: none;
 }
+
+body.before-load{
+  overflow: hidden;
+}
+
 .global-nav{
   height : 44px;
   padding : 0 1rem;
@@ -190,8 +195,11 @@ footer{
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem{
   display: block;
+  will-change: transform, opacity;
 }
-
+.scroll-effect-end .sticky-elem{
+  display: none !important;
+}
 .image-blend-canvas.sticky{
   position : fixed;
   top : 0;
@@ -215,6 +223,9 @@ footer{
   background-color: #fff;
   opacity: 0;
   transition : .5s;
+}
+.before-load .container{
+  display: none;
 }
 .before-load .loading{
   opacity: 1;
@@ -242,7 +253,9 @@ footer{
   fill : transparent;
   animation : loading-circle-ani 1s infinite;
 }
-
+.normal-content{
+  margin-bottom : 10rem;
+}
 @media(min-width : 1024px){
   #scroll-section-0 h1{
     font-size : 9vw;
